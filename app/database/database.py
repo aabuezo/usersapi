@@ -1,7 +1,7 @@
 import sqlite3
 
-from schemas import UserCreate, UserLogin, UserRead, UserUpdate
-from queries import Queries
+from app.schemas.schemas import UserCreate, UserLogin, UserRead, UserUpdate
+from .queries import Queries
 
 
 class Database:
