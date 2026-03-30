@@ -11,19 +11,19 @@ class Queries:
     """
 
     GET_USER_BY_ID = """
-        SELECT * FROM users WHERE id = :id
+        SELECT id, first_name, last_name, email, username FROM users WHERE id = :id
     """
 
     GET_USER_BY_USERNAME = """
-        SELECT * FROM users WHERE username = :username
-    """
-
-    GET_USER_BY_EMAIL = """
-        SELECT * FROM users WHERE email = :email
+        SELECT id, first_name, last_name, email, username FROM users WHERE username = :username
     """
 
     GET_ALL_USERS = """
-        SELECT * FROM users
+        SELECT id, first_name, last_name, email, username FROM users
+    """
+
+    GET_CREDENTIALS = """
+        SELECT username, password FROM users WHERE username = :username
     """
 
     CREATE_USER = """
